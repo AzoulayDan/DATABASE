@@ -8,7 +8,7 @@ CREATE TABLE compte(
 	name_compte			Varchar(35) ,
 	identifier_compte	Varchar(60) ,
 	points_compte		Int ,
-	UNIQUE (device_identifier_compte )
+	UNIQUE (identifier_compte )
 );
 
 -- Table mission
