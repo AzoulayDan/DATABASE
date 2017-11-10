@@ -1,1 +1,1 @@
-web: gunicorn router:app --worker-class gevent
+web: gunicorn bdd:app --worker-class gevent
