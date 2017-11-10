@@ -1,7 +1,7 @@
 #-*- encoding:utf-8 -*-
 from flask import Flask
 from flask_cors import CORS
-from db import Db()
+from db import Db
 
 @app.route('/')
 def init_database():
