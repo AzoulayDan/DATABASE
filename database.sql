@@ -1,6 +1,8 @@
 DROP TABLE IF EXISTS compte CASCADE;
 DROP TABLE IF EXISTS mission CASCADE;
 DROP TABLE IF EXISTS photo CASCADE;
+DROP TABLE IF EXISTS participer CASCADE;
+DROP TABLE IF EXISTS avoir CASCADE; 
 
 -- Table compte
 CREATE TABLE compte(
@@ -25,7 +27,7 @@ CREATE TABLE photo(
 	points_photos		Int
 );
 
-/*-- Table de relation participer
+-- Table de relation participer
 CREATE TABLE participer(
 	id_compte 			Int NOT NULL ,
 	id_mission 			Int NOT NULL ,
@@ -44,5 +46,5 @@ ALTER TABLE participer ADD CONSTRAINT FK_participer_id_compte FOREIGN KEY (id_co
 ALTER TABLE participer ADD CONSTRAINT FK_participer_id_mission FOREIGN KEY (id_mission) REFERENCES mission(id_mission);
 ALTER TABLE avoir ADD CONSTRAINT FK_avoir_id_photo FOREIGN KEY (id_photo) REFERENCES photo(id_photo);
 ALTER TABLE avoir ADD CONSTRAINT FK_avoir_id_mission FOREIGN KEY (id_mission) REFERENCES mission(id_mission);
-*/
+
 
