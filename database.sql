@@ -51,14 +51,17 @@ ALTER TABLE avoir ADD CONSTRAINT FK_avoir_id_mission FOREIGN KEY (id_mission) RE
 -- Ajout de données pour test
 INSERT INTO compte(name_compte, identifier_compte, points_compte) VALUES('babar', 'UID1', 0);
 
-INSERT INTO mission(name_mission) VALUES('mission1');
+INSERT INTO mission(name_mission) VALUES('mission1'), ('mission2'), ('mission3');
 
 INSERT INTO photo(name_photo, description_photo, points_photos) VALUES 
 ('dog', 'photo de chien', 10),
 ('cat', 'photo de chat', 10),
 ('elephant', 'un jolie elephant', 30);
 
-INSERT INTO participer (id_compte, id_mission) VALUES (1, 1);
+INSERT INTO participer (id_compte, id_mission) VALUES 
+(1, 1),
+(1,2),
+(1,3);
 
 INSERT INTO avoir (id_photo, id_mission) VALUES 
 (1, 1),
