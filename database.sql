@@ -48,3 +48,19 @@ ALTER TABLE avoir ADD CONSTRAINT FK_avoir_id_photo FOREIGN KEY (id_photo) REFERE
 ALTER TABLE avoir ADD CONSTRAINT FK_avoir_id_mission FOREIGN KEY (id_mission) REFERENCES mission(id_mission);
 
 
+-- Ajout de données pour test
+INSERT INTO compte(name_compte, identifier_compte, points_compte) VALUES('babar', 'UID1', 0);
+
+INSERT INTO mission(name_mission) VALUES('mission1');
+
+INSERT INTO photo(name_photo, description_photo, points_photos) VALUES 
+('chien', 'photo de chien', 10),
+('chat', 'photo de chat', 10),
+('elephant', 'un jolie elephant', 30);
+
+INSERT INTO participer (id_compte, id_mission) VALUES (1, 1);
+
+INSERT INTO avoir (id_photo, id_mission) VALUES 
+(1, 1),
+(2, 1),
+(3, 1);
