@@ -41,6 +41,13 @@ CREATE TABLE avoir(
 	PRIMARY KEY (id_photo ,id_mission )
 );
 
+-- Table finished mission
+CREATE TABLE missionEnded(
+	id_missionEnded		SERIAL PRIMARY KEY,
+	id_compte 			Int NOT NULL ,
+	id_mission 			Int NOT NULL
+);
+
 -- Alter Table
 ALTER TABLE participer ADD CONSTRAINT FK_participer_id_compte FOREIGN KEY (id_compte) REFERENCES compte(id_compte);
 ALTER TABLE participer ADD CONSTRAINT FK_participer_id_mission FOREIGN KEY (id_mission) REFERENCES mission(id_mission);
