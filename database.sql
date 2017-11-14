@@ -37,7 +37,7 @@ CREATE TABLE participer(
 -- Table de relation avoir
 CREATE TABLE avoir(
 	id_photo			Int NOT NULL ,
-	id_mission			Int NOT NULL ,
+	p			Int NOT NULL ,
 	PRIMARY KEY (id_photo ,id_mission )
 );
 
@@ -45,7 +45,18 @@ CREATE TABLE avoir(
 CREATE TABLE missionEnded(
 	id_missionEnded		SERIAL PRIMARY KEY,
 	id_compte 			Int NOT NULL ,
-	id_mission 			Int NOT NULL
+	id_mission 			Int NOT NULL ,
+	date_missionEnded	Varchar(50)
+);
+
+-- Table photo validées (remplie quand une photo est validée)
+CREATE TABLE validatePhoto(
+	id_validatePhoto	SERIAL PRIMARY KEY ,
+	id_compte 			Int NOT NULL ,
+	id_mission 			Int NOT NULL ,
+	id_photo 			Int NOT NULL ,
+	date_validatePhoto	Varchar(50)
+
 );
 
 -- Alter Table
@@ -56,7 +67,8 @@ ALTER TABLE avoir ADD CONSTRAINT FK_avoir_id_mission FOREIGN KEY (id_mission) RE
 
 
 -- Ajout de données pour test
-INSERT INTO compte(name_compte, identifier_compte, points_compte) VALUES('babar', 'UID1', 0);
+INSERT INTO compte(name_compte, identifier_compte, points_compte) VALUES
+('babar', 'UID1', 0);
 
 INSERT INTO mission(name_mission) VALUES('mission1');
 
