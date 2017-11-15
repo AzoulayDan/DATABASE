@@ -45,7 +45,7 @@ CREATE TABLE avoir(
 CREATE TABLE missionEnded(
 	id_missionEnded		SERIAL PRIMARY KEY,
 	id_compte 			Int ,
-	id_mission 			Int L ,
+	id_mission 			Int ,
 	date_missionEnded	Varchar(50)
 );
 
