@@ -44,17 +44,17 @@ CREATE TABLE avoir(
 -- Table finished mission
 CREATE TABLE missionEnded(
 	id_missionEnded		SERIAL PRIMARY KEY,
-	id_compte 			Int NOT NULL ,
-	id_mission 			Int NOT NULL ,
+	id_compte 			Int ,
+	id_mission 			Int ,
 	date_missionEnded	Varchar(50)
 );
 
 -- Table photo validées (remplie quand une photo est validée)
 CREATE TABLE validatePhoto(
 	id_validatePhoto	SERIAL PRIMARY KEY ,
-	id_compte 			Int NOT NULL ,
-	id_mission 			Int NOT NULL ,
-	id_photo 			Int NOT NULL ,
+	id_compte 			Int ,
+	id_mission 			Int ,
+	id_photo 			Int ,
 	date_validatePhoto	Varchar(50)
 
 );
