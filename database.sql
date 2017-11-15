@@ -37,7 +37,7 @@ CREATE TABLE participer(
 -- Table de relation avoir
 CREATE TABLE avoir(
 	id_photo			Int NOT NULL ,
-	p			Int NOT NULL ,
+	id_mission			Int NOT NULL ,
 	PRIMARY KEY (id_photo ,id_mission )
 );
 
@@ -45,7 +45,7 @@ CREATE TABLE avoir(
 CREATE TABLE missionEnded(
 	id_missionEnded		SERIAL PRIMARY KEY,
 	id_compte 			Int ,
-	id_mission 			Int ,
+	id_mission 			Int L ,
 	date_missionEnded	Varchar(50)
 );
 
