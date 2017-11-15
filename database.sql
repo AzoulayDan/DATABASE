@@ -77,8 +77,8 @@ INSERT INTO photo(name_photo, description_photo, points_photos) VALUES
 ('cat', 'photo de chat', 10),
 ('elephant', 'un jolie elephant', 30);
 
--- INSERT INTO participer (id_compte, id_mission) VALUES 
--- (1,1);
+INSERT INTO participer (id_compte, id_mission) VALUES 
+ (1,1);
 
 INSERT INTO avoir (id_photo, id_mission) VALUES 
 (1, 1),
