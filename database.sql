@@ -69,7 +69,9 @@ CREATE TABLE photoPath(
 	id_compte 		Int ,
 	id_mission 		Int ,
 	name_photo 		Varchar(35) ,
-	path_photo 		Varchar(100)
+	path_photo 		Varchar(100) ,
+	latitude_photo	double precision ,
+	longitude_photo double precision  
 );
 
 -- Alter Table
@@ -79,8 +81,8 @@ ALTER TABLE avoir ADD CONSTRAINT FK_avoir_id_photo FOREIGN KEY (id_photo) REFERE
 ALTER TABLE avoir ADD CONSTRAINT FK_avoir_id_mission FOREIGN KEY (id_mission) REFERENCES mission(id_mission);
 
 -- Ajout de données pour test
-INSERT INTO compte(name_compte, identifier_compte, points_compte) VALUES
-('babar', 'UID1', 0);
+INSERT INTO compte(name_compte, identifier_compte, points_compte, url_compte) VALUES
+('babar', 'UID1', 0, " ");
 
 INSERT INTO mission(name_mission) VALUES('mission1');
 
