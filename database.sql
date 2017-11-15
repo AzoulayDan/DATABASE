@@ -13,6 +13,7 @@ CREATE TABLE compte(
 	name_compte			Varchar(35) ,
 	identifier_compte	Varchar(60) ,
 	points_compte		Int ,
+	url_compte			Varchar(100) ,
 	UNIQUE (identifier_compte )
 );
 
@@ -71,13 +72,11 @@ CREATE TABLE photoPath(
 	path_photo 		Varchar(100)
 );
 
-
 -- Alter Table
 ALTER TABLE participer ADD CONSTRAINT FK_participer_id_compte FOREIGN KEY (id_compte) REFERENCES compte(id_compte);
 ALTER TABLE participer ADD CONSTRAINT FK_participer_id_mission FOREIGN KEY (id_mission) REFERENCES mission(id_mission);
 ALTER TABLE avoir ADD CONSTRAINT FK_avoir_id_photo FOREIGN KEY (id_photo) REFERENCES photo(id_photo);
 ALTER TABLE avoir ADD CONSTRAINT FK_avoir_id_mission FOREIGN KEY (id_mission) REFERENCES mission(id_mission);
-
 
 -- Ajout de données pour test
 INSERT INTO compte(name_compte, identifier_compte, points_compte) VALUES
