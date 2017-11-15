@@ -64,7 +64,7 @@ CREATE TABLE validatePhoto(
 
 -- Table de relation entre le compte et une photo enregistrée
 CREATE TABLE photoPath(
-	id_path			SERIAL PRIMARY KEY
+	id_path			SERIAL PRIMARY KEY ,
 	id_compte 		Int ,
 	id_mission 		Int ,
 	name_photo 		Varchar(35) ,
