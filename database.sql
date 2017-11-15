@@ -61,6 +61,16 @@ CREATE TABLE validatePhoto(
 
 );
 
+-- Table de relation entre le compte et une photo enregistrée
+CREATE TABLE photoPath(
+	id_path			SERIAL PRIMARY KEY
+	id_compte 		Int ,
+	id_mission 		Int ,
+	name_photo 		Varchar(35)
+	path_photo 		Varchar(100)
+);
+
+
 -- Alter Table
 ALTER TABLE participer ADD CONSTRAINT FK_participer_id_compte FOREIGN KEY (id_compte) REFERENCES compte(id_compte);
 ALTER TABLE participer ADD CONSTRAINT FK_participer_id_mission FOREIGN KEY (id_mission) REFERENCES mission(id_mission);
