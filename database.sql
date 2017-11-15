@@ -5,6 +5,7 @@ DROP TABLE IF EXISTS participer CASCADE;
 DROP TABLE IF EXISTS avoir CASCADE; 
 DROP TABLE IF EXISTS missionEnded CASCADE;
 DROP TABLE IF EXISTS validatePhoto CASCADE;
+DROP TABLE IF EXISTS photoPath CASCADE;
 
 -- Table compte
 CREATE TABLE compte(
@@ -66,7 +67,7 @@ CREATE TABLE photoPath(
 	id_path			SERIAL PRIMARY KEY
 	id_compte 		Int ,
 	id_mission 		Int ,
-	name_photo 		Varchar(35)
+	name_photo 		Varchar(35) ,
 	path_photo 		Varchar(100)
 );
 
