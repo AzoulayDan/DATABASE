@@ -74,6 +74,14 @@ CREATE TABLE photoPath(
 	longitude_photo double precision  
 );
 
+-- Table iBeacons
+CREATE TABLE ibeacons(
+	id_ibeacons 	SERIAL PRIMARY KEY ,
+	uuid_ibeacons	Varchar ,
+	minor			Int ,
+	major			Int
+);
+
 -- Alter Table
 ALTER TABLE participer ADD CONSTRAINT FK_participer_id_compte FOREIGN KEY (id_compte) REFERENCES compte(id_compte);
 ALTER TABLE participer ADD CONSTRAINT FK_participer_id_mission FOREIGN KEY (id_mission) REFERENCES mission(id_mission);
