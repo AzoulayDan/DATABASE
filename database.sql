@@ -78,7 +78,8 @@ CREATE TABLE photoPath(
 -- Table iBeacons
 CREATE TABLE ibeacons(
 	id_ibeacons 	SERIAL PRIMARY KEY ,
-	uuid_ibeacons	Varchar ,
+	name 		 	Varchar(35) ,
+	uuid_ibeacons	Varchar(35) ,
 	minor			Int ,
 	major			Int
 );
